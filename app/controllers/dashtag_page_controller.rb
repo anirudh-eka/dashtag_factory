@@ -1,4 +1,4 @@
-class DashtagController < ApplicationController
+class DashtagPageController < ApplicationController
   def new
   end
 
@@ -7,7 +7,7 @@ class DashtagController < ApplicationController
 
     client.app_setup.create({ 
         "app"=> {
-          "name" => "dashtagfromearth"
+          "name" => "dashtagfrommars"
         },
         "source_blob" => 
             { "url" => "https://github.com/anirudh-eka/dashtag_solo/tarball/master/"},

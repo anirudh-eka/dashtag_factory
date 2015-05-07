@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'dashtag/index'
-  root 'dashtag#index'
-  get 'dashtag/new'
-  post 'dashtag/create'
+  get 'dashtag_page/index'
+  root 'dashtag_page#index'
+  get 'dashtag_page/new'
+  post 'dashtag_page/create'
 # for omniauth:
   get "login" => "session#new"
   get "/auth/:provider/callback" => "session#create"
