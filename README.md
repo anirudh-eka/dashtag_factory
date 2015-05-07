@@ -1,13 +1,16 @@
-== DASHTAG FACTORY
+DASHTAG FACTORY
+---------------
 
 The Dashtag Factory is an application that eases the process for users to setup [Dashtag](https://github.com/anirudh-eka/dashtag) Pages on Heroku. 
 
-== Tech Stack
+Tech Stack
+----------
 Ruby (2.1.3)
 Rails (4.*)
 
 
-== Run/Contribute
+Run/Contribute
+--------------
 
 Clone the repo:
 
