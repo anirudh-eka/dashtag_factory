@@ -49,3 +49,5 @@ gem 'dotenv-rails'
 gem 'omniauth-heroku'
 gem 'platform-api'
 
+ruby "2.1.3"
+
