@@ -1,4 +1,5 @@
-== DASHTAG FACTORY
+DASHTAG FACTORY
+---------------
 
 The Dashtag Factory is an application that eases the process for users to setup [Dashtag](https://github.com/anirudh-eka/dashtag) Pages on Heroku. 
 
