@@ -1,0 +1,9 @@
+<h1>Your Heroku apps:</h1>
+
+<ul>
+  <% @apps.each do |app| %>
+    <li><%= app["name"] %></li>
+  <% end %>
+</ul>
+
+<a href="/dashtag/new">Create a Dashtag Page</a>
