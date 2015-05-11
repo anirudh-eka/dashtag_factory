@@ -2,10 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-<<<<<<< HEAD:app/assets/stylesheets/dashtag.scss
+
 #twitter-api-screenshots-container {
-	background-color: #ee9d59;
-	 
+	background-color: $get-access-to-api-color;
 }
 
 #twitter-api-screenshots-container h1 {
@@ -24,6 +23,5 @@
 #twitter-api-screenshots-container img {
 	height: 400px;
 }
-=======
->>>>>>> Nicolette | #7 | Create landing page:app/assets/stylesheets/dashtag.css.scss
+
 

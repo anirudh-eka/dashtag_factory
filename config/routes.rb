@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'dashtag_page/new'
+  root                                   'dashtag_page#index'
+  get  'twitter_api_screenshots'     =>  'dashtag_page#twitter_api_screenshots'
+  get  'launch_page'                 =>  'dashtag_page#new'
   post 'dashtag_page/create'
-  get 'dashtag_page/index'
-  get 'dashtag_page/twitter_api_screenshots'
+ 
   
-  root 'dashtag_page#index'
 # for omniauth:
-  get "login" => "session#new"
-  get "/auth/:provider/callback" => "session#create"
+  get "login"                       =>   "session#new"
+  get "/auth/:provider/callback"    =>   "session#create"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
