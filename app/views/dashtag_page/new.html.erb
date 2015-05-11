@@ -1,7 +1,12 @@
 <h1>Dashtag form</h1>
 <p>Find me in app/views/dashtag/new.html.erb</p>
+<% if flash[:error] != nil %>
+  <%= flash[:error] %>
+<% end %>
 
 <%= form_tag("/dashtag_page/create", method: "post") do %>
+  <%= label_tag(:name, "Name") %>
+  <%= text_field_tag(:name) %>
   <%= label_tag(:hashtags, "Hashag(s)") %>
   <%= text_field_tag(:hashtags) %>
   <%= label_tag(:twitter_consumer_key, "Twitter Consumer Key") %>
@@ -10,3 +15,4 @@
   <%= text_field_tag(:twitter_consumer_secret) %>
   <%= submit_tag("Deploy") %>
 <% end %>
+
