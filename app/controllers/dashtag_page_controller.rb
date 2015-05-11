@@ -22,6 +22,9 @@ class DashtagPageController < ApplicationController
   	redirect_to :action => "new"
   end
 
-  def twitter_api_screenshots
+ def twitter_api_screenshots
+ end
+ 
+  def index
   end
-end
+end 
