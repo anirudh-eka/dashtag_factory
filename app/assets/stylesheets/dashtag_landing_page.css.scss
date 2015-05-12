@@ -1,5 +1,13 @@
 /* jumbotron styling */
-
+.landing-page-container {
+	height: 100%;
+	min-height: 880px;	
+	position: relative;
+}
+.landing-page-centered-content {
+	position: absolute; 
+	top: 30%;	
+}
 h1#dashtag_logo {
 	color: $white; 
 	font-size: 120px;
@@ -7,12 +15,13 @@ h1#dashtag_logo {
 }
 .jumbotron {
 	background-color: $jumbotron-background-color;
+	height: 100%; 
 }
 
 /* carousel styling*/
 
 #myCarousel {
-	background-color: $carousel-color;
+	background-color: $carousel-color;	
 }
 .item {
 	height: 460px;
@@ -32,7 +41,7 @@ p.carousel_main_text {
 
 /*second_section*/
 
-.second_section {
+.what-do-i-need-container {
 	background-color: $what-do-i-need-color;
 	border-radius: 6px; 
 	color: $white;
@@ -79,7 +88,7 @@ p.note {
 
 /* third section */
 
-.third_section {
+.got-it-container {
 	background-color: $get-access-to-api-color;
 	border-radius: 6px; 
 	color: $white;
@@ -108,7 +117,7 @@ p.note {
 
 /* last_section */
 
-.last_section {
+.ready-to-launch-container {
 	background-color: $ready-to-launch;
 	border-radius: 6px; 
 	color: $white;
