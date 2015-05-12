@@ -12,6 +12,9 @@ class DashtagPageController < ApplicationController
   def twitter_api_screenshots
   end
 
+  def instagram_api_screenshots
+  end
+
   def index
   end
 
