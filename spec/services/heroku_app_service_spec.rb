@@ -15,12 +15,14 @@ describe HerokuAppService do
 		context "When app_setup creation fails" do
 			it "should return error message" do
 				app_setup_mock = double("app_setup")
-				status_error = Excon::Errors::HTTPStatusError.new("The status is bad")
-				allow(app_setup_mock).to receive(:create).and_raise(status_error)
-
+				mock_response = double("response")
+				status_error = Excon::Errors::UnprocessableEntity.new("The status is bad", nil, mock_response)
 				client_mock = double("client", app_setup: app_setup_mock)
 
-				expect(HerokuAppService.create_app(client_mock, {})) .to eq(status_error.message)	
+				allow(app_setup_mock).to receive(:create).and_raise(status_error)
+				allow(mock_response).to receive(:data).and_return({body:"{\"message\":\"Name must start with a letter\"}"})
+
+				expect(HerokuAppService.create_app(client_mock, {})) .to eq("Name must start with a letter")	
 
 			end			
 		end
