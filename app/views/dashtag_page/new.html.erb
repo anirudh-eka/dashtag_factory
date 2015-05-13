@@ -11,66 +11,62 @@
   <%= text_field_tag(:twitter_consumer_key) %>
   <%= label_tag(:twitter_consumer_secret, "Twitter Consumer Secret") %>
   <%= text_field_tag(:twitter_consumer_secret) %>
-</div>
-<div><h4>Optional</h4>
-  <ul style = "list-style-type: none; display: inline-block">
-    <li> <%= label_tag(:censored_words, "Censored Words") %></li>
-    <li><%= text_field_tag(:censored_words) %></li>
-    
-    <li><%= label_tag(:censored_users, "Censored Users") %></li>
-    <li><%= text_field_tag(:censored_users) %></li>
-    
-    <li><%= label_tag(:instagram_client_id, "Instagram Client Id") %></li>
-    <li><%= text_field_tag(:instagram_client_id) %></li>
-    
-    <li><%= label_tag(:twitter_users, "Twitter Users") %></li>
-    <li><%= text_field_tag(:twitter_users) %></li>
-    
-    <li><%= label_tag(:instagram_users, "Instagram Users") %></li>
-    <li><%= text_field_tag(:instagram_users) %></li>
-    
-    <li><%= label_tag(:instagram_user_ids, "Instagram User Ids") %></li>
-    <li><%= text_field_tag(:instagram_user_ids) %></li>
-  </ul>
+  </div>
+  <div><h4>Optional</h4>
+    <ul style = "list-style-type: none; display: inline-block">
+      <li> <%= label_tag(:censored_words, "Censored Words") %></li>
+      <li><%= text_field_tag(:censored_words) %></li>
+      
+      <li><%= label_tag(:censored_users, "Censored Users") %></li>
+      <li><%= text_field_tag(:censored_users) %></li>
+      
+      <li><%= label_tag(:instagram_client_id, "Instagram Client Id") %></li>
+      <li><%= text_field_tag(:instagram_client_id) %></li>
+      
+      <li><%= label_tag(:twitter_users, "Twitter Users") %></li>
+      <li><%= text_field_tag(:twitter_users) %></li>
+      
+      <li><%= label_tag(:instagram_users, "Instagram Users") %></li>
+      <li><%= text_field_tag(:instagram_users) %></li>
+      
+      <li><%= label_tag(:instagram_user_ids, "Instagram User Ids") %></li>
+      <li><%= text_field_tag(:instagram_user_ids) %></li>
+    </ul>
 
-  <ul style = "list-style-type: none; display: inline-block">  
-    <li><%= label_tag(:font_family, "Font Family") %></li>
-    <li><%= text_field_tag(:font_family) %></li>
-    
-    <li><%= label_tag(:header_title, "Header Title") %></li>
-    <li><%= text_field_tag(:header_title) %></li>
+    <ul style = "list-style-type: none; display: inline-block">  
+      <li><%= label_tag(:font_family, "Font Family") %></li>
+      <li><%= text_field_tag(:font_family) %></li>
+      
+      <li><%= label_tag(:header_title, "Header Title") %></li>
+      <li><%= text_field_tag(:header_title) %></li>
 
-    <li><%= label_tag(:header_link, "Header Link") %></li>
-    <li><%= text_field_tag(:header_link) %></li>
+      <li><%= label_tag(:header_link, "Header Link") %></li>
+      <li><%= text_field_tag(:header_link) %></li>
 
-    <li><%= label_tag(:header_color, "Header Color") %></li>
-    <li><%= text_field_tag(:header_color) %></li>
+      <li><%= label_tag(:header_color, "Header Color") %></li>
+      <li><%= text_field_tag(:header_color) %></li>
 
-    <li><%= label_tag(:background_color, "Background Color") %></li>
-    <li><%= text_field_tag(:background_color) %></li>
-  </ul>
+      <li><%= label_tag(:background_color, "Background Color") %></li>
+      <li><%= text_field_tag(:background_color) %></li>
+    </ul>
 
-  <ul style = "list-style-type: none; display: inline-block">
-    <li><%= label_tag(:post_color_1, "Post Color 1") %></li>
-    <li><%= text_field_tag(:post_color_1) %></li>
+    <ul style = "list-style-type: none; display: inline-block">
+      <li><%= label_tag(:post_color_1, "Post Color 1") %></li>
+      <li><%= text_field_tag(:post_color_1) %></li>
 
-    <li><%= label_tag(:post_color_2, "Post Color 2") %></li>
-    <li><%= text_field_tag(:post_color_2) %></li>
+      <li><%= label_tag(:post_color_2, "Post Color 2") %></li>
+      <li><%= text_field_tag(:post_color_2) %></li>
 
-    <li><%= label_tag(:post_color_3, "Post Color 3") %></li>
-    <li><%= text_field_tag(:post_color_3) %></li>
+      <li><%= label_tag(:post_color_3, "Post Color 3") %></li>
+      <li><%= text_field_tag(:post_color_3) %></li>
 
-    <li><%= label_tag(:post_color_4, "Post Color 4") %></li>
-    <li><%= text_field_tag(:post_color_4) %></li>
+      <li><%= label_tag(:post_color_4, "Post Color 4") %></li>
+      <li><%= text_field_tag(:post_color_4) %></li>
 
-        <li><%= label_tag(:api_rate, "API Rate") %></li>
-    <li><%= text_field_tag(:api_rate) %></li>
-  </ul>
-</div>
-
-
-
-
+      <li><%= label_tag(:api_rate, "API Rate") %></li>
+      <li><%= text_field_tag(:api_rate) %></li>
+    </ul>
+  </div>
   <%= submit_tag("Deploy") %>
 <% end %>
 <p><% if flash[:error] != nil %>

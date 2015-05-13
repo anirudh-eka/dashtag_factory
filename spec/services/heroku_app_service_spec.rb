@@ -55,18 +55,26 @@ describe HerokuAppService do
 			expect(app_setup_mock.create_args["overrides"]["env"]["POST_COLOR_3"]).to eq(app_options[:post_color_3])
 			expect(app_setup_mock.create_args["overrides"]["env"]["POST_COLOR_4"]).to eq(app_options[:post_color_4])
 		end
-
+		
 		context "When creation fails" do
-			it "should return error message" do
-				app_setup_mock = double("app_setup")
-				mock_response = double("response")
-				status_error = Excon::Errors::UnprocessableEntity.new("The status is bad", nil, mock_response)
+			it 'sets the env variables correctly' do 
+				app_setup_mock = AppSetupMock.new
 				client_mock = double("client", app_setup: app_setup_mock)
+				
+				app_options = {hashtags: "hash"}			
 
-				allow(app_setup_mock).to receive(:create).and_raise(status_error)
-				allow(mock_response).to receive(:data).and_return({body:"{\"message\":\"Name must start with a letter\"}"})
+				HerokuAppService.create_app(client_mock, app_options)
+				
+			end
+		end
 
-				expect(HerokuAppService.create_app(client_mock, {})) .to eq("Name must start with a letter")	
+		context "When creation succeeds" do
+			it "should return true" do
+				app_setup_mock = double("app_setup")
+				client_mock = double("client", app_setup: app_setup_mock)
+				allow(app_setup_mock).to receive(:create)
+
+				expect(HerokuAppService.create_app(client_mock, {})) .to eq(true)	
 
 			end			
 		end

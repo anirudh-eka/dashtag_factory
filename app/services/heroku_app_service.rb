@@ -35,7 +35,7 @@ class HerokuAppService
     	
     	begin
             client.app_setup.create(arguments) 
-            return "Deploy Successful!"
+            return true
 		rescue Exception => e
             return JSON.load(e.response.data[:body])["message"]
 		end 
