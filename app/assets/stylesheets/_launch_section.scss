@@ -1,0 +1,40 @@
+.ready-to-launch-container {
+	background-color: $ready-to-launch;
+	border-radius: 6px; 
+	color: $white;
+	padding-bottom: 30px;
+}
+.solid_border {
+	 border: 5px solid #fff;
+	 margin-top: 20px;
+	 margin-left: 60px;
+	 margin-right: 60px;
+	 margin-bottom: 60px;
+	 padding-left: 60px;
+	 padding-right: 60px;
+	 padding-bottom: 60px;
+	 padding-top: 60px;
+}
+.last_section_para {
+	font-size: 30px;
+	text-align: center;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.btn {
+	margin-left: 140px; 
+	margin-top: 20px;
+}
+.btn-lg {
+	background-color: $heroku-color; 
+	padding: 15px 30px 15px 30px;
+}
+.btn-lg:hover {
+	background-color: $heroku-hover-color; 
+}
+#login {
+	color: $white; 
+	text-decoration: none; 
+	font-size: 40px;
+}
