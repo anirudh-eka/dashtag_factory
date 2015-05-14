@@ -2,13 +2,34 @@ require 'spec_helper'
 
 describe HerokuAppService do
 	context 'When creating an app' do 
+    context "When creation succeeds" do
+      it "should return nil" do
+        app_setup_mock = double("app_setup")
+        client_mock = double("client", app_setup: app_setup_mock)
+        allow(app_setup_mock).to receive(:create)
+
+        expect(HerokuAppService.create_app_setup(client_mock, {})) .to eq(nil)  
+      end     
+    end
+    context 'When initial app_setup creation fails' do
+      it "should return error message" do
+        mock_data = {body: "{\"message\":\"name is too short\"}"}
+        mock_response = double("response", data: mock_data)
+        app_setup_mock = double("app_setup")
+        allow(app_setup_mock).to receive(:create).and_raise(Excon::Errors::UnprocessableEntity.new("status error", nil, mock_response))
+        client_mock = double("client", app_setup: app_setup_mock)  
+
+        expect(HerokuAppService.create_app_setup(client_mock, {})).to eq("name is too short")
+      end
+    end
+
 		it 'sets the name correctly' do 
 			app_setup_mock = AppSetupMock.new
 			client_mock = double("client", app_setup: app_setup_mock)
 			
 			app_options = {name: "hereisaname"}			
 
-			HerokuAppService.create_app(client_mock, app_options)
+			HerokuAppService.create_app_setup(client_mock, app_options)
 			expect(app_setup_mock.create_args["app"]["name"]).to eq(app_options[:name])
 		end
 
@@ -35,7 +56,7 @@ describe HerokuAppService do
 							post_color_3: "maroon",
 							post_color_4: "violet"}			
 
-			HerokuAppService.create_app(client_mock, app_options)
+			HerokuAppService.create_app_setup(client_mock, app_options)
 			expect(app_setup_mock.create_args["overrides"]["env"]["HASHTAGS"]).to eq(app_options[:hashtags])
 			expect(app_setup_mock.create_args["overrides"]["env"]["TWITTER_CONSUMER_KEY"]).to eq(app_options[:twitter_consumer_key])
 			expect(app_setup_mock.create_args["overrides"]["env"]["TWITTER_CONSUMER_SECRET"]).to eq(app_options[:twitter_consumer_secret])
@@ -54,30 +75,7 @@ describe HerokuAppService do
 			expect(app_setup_mock.create_args["overrides"]["env"]["POST_COLOR_2"]).to eq(app_options[:post_color_2])
 			expect(app_setup_mock.create_args["overrides"]["env"]["POST_COLOR_3"]).to eq(app_options[:post_color_3])
 			expect(app_setup_mock.create_args["overrides"]["env"]["POST_COLOR_4"]).to eq(app_options[:post_color_4])
-		end
-		
-		context "When creation fails" do
-			it 'sets the env variables correctly' do 
-				app_setup_mock = AppSetupMock.new
-				client_mock = double("client", app_setup: app_setup_mock)
-				
-				app_options = {hashtags: "hash"}			
-
-				HerokuAppService.create_app(client_mock, app_options)
-				
-			end
-		end
-
-		context "When creation succeeds" do
-			it "should return true" do
-				app_setup_mock = double("app_setup")
-				client_mock = double("client", app_setup: app_setup_mock)
-				allow(app_setup_mock).to receive(:create)
-
-				expect(HerokuAppService.create_app(client_mock, {})) .to eq(true)	
-
-			end			
-		end
+		end		
 	end
 end
 

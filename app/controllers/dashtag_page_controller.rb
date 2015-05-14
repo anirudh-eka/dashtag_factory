@@ -6,12 +6,13 @@ class DashtagPageController < ApplicationController
   def create
     client = PlatformAPI.connect_oauth(session[:access_token])
     # submit_form(client)
-    result = HerokuAppService.create_app(client, params)
-    if result == true
-      redirect_to :action => "success"
+    error_message = HerokuAppService.create_app_setup(client, params)
+    
+    if error_message
+      flash[:error] = error_message 
+      redirect_to :action => "new"
     else
-      flash[:error] = result    
-  	  redirect_to :action => "new"
+      redirect_to :action => "success"
     end
   end
   
