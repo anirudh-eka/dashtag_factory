@@ -1,0 +1,2 @@
+class AppSetupException < Exception
+end

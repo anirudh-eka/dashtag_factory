@@ -2,16 +2,30 @@ require 'spec_helper'
 
 describe DashtagPageController do
 	context 'When creating a heroku app' do 
-		it 'calls the heroku_app_service' do 
-			dashtag_page_controller = DashtagPageController.new
-			client_mock = double()
-			app_mock = {"status" => "pending"}
+		it 'calls the HerokuAppService with the correct request_body and a new app_setup' do 
+			app_setup = AppSetup.new("blah")
+			app_setup_service_mock = double();
+			allow(app_setup_service_mock).to receive(:create).with(any_args).and_return(app_setup)
 
-			allow(PlatformAPI).to receive(:connect_oauth).and_return(client_mock)
-			params = {"name" =>"something", "controller" => "dashtag_page", "action" => "create"}
-			expect(HerokuAppService).to receive(:create_app_setup).with(client_mock, params).and_return(app_mock)
+			app_setup_service = controller.
+        		load_app_setup_service(app_setup_service_mock)
 
-			post :create, name: "something"
+			request_body = { 
+		        "app"=> {
+		          "name" => "something"
+		        },
+		        "source_blob" => 
+		            { "url" => "https://github.com/anirudh-eka/dashtag_solo/tarball/master/"},
+		        "overrides" => {
+		            "env" => {
+		                "HASHTAGS" => "hash"
+		                }
+		          }
+		      }
+
+			expect(HerokuAppService).to receive(:create_app_setup).with(app_setup, request_body).and_return(false)
+
+			post :create, dashtag_page: {name: "something", hashtags: "hash"}
 		end
 	end
 end
