@@ -13,3 +13,14 @@
 	margin: 0 auto;
 	width: 80%;
 }
+.link-to-next-step {
+	font-size: 35px; 
+	margin-left: 80%;
+	margin-top: 10%;
+}
+.link-to-next-step > a {
+	color: $white; 	
+}
+.link-to-next-step > a:hover {
+	text-decoration: none;
+}
