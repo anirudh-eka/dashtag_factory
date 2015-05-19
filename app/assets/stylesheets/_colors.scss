@@ -1,10 +1,10 @@
-$jumbotron-background-color: #28B3C7;
-$carousel-color: #AD0F5E;
-$what-do-i-need-color: #D03F95;
+$jumbotron-background-color: lighten(#28B3C7, 5%);
+$carousel-color: darken(#28B3C7, 10%);
+$what-do-i-need-color: lighten(#5C468B, 20%);
 $get-access-to-api-color: #ee9d59;
-$ready-to-launch: #B8C447;
-$heroku-color: #7158B8;
-$heroku-hover-color: #8c75d1; 
+$ready-to-launch: lighten(#D03F95, 10%);
+$heroku-color: darken(#D03F95, 5%);
+$heroku-hover-color: darken(#D03F95, 10%); 
 $black: #2A2B2B;
 $off-white: #F6F7F7; 
 $white: #fff;

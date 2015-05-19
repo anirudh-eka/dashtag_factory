@@ -6,22 +6,16 @@
              <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
              </ol>
 
           <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                  <p class="text-center carousel_main_text">Dashtag is a light weight rails application that pulls tweets with a particular hastag and displays them using masonry.</p>
-                  <p class="text-center carousel_main_text">The app is pretty much plug and play.</p>
+                <div class="item active">
+                    <%=link_to image_tag( "carousel_pic.png", alt: "Carousel Picture") %>
+                </div>
+                <div class="item">
+                  <p class="text-center carousel_main_text"><span class="uppercase">Dashtag</span> Factory allows users to set up their own instance of <span class="uppercase">Dashtag</span> so they can visualize selected hashtags from Twitter and Instagram. </p>
+                  <p class="text-center carousel_main_text">The best part is it's free!</p>
               </div>
-
-                <div class="item">
-                    <%=link_to image_tag( "carousel_pic.png", alt: "Carousel Picture") %>
-                </div>
-
-                <div class="item">
-                    <%=link_to image_tag( "carousel_pic.png", alt: "Carousel Picture") %>
-                </div>
           </div>
           
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -38,27 +32,21 @@
 
 <div class="container-fluid landing-page-container what-do-i-need-container">
    <div class="centering-content-container">
-        <h2 class="section_header">What do I need?</h2>
+        <h2 class="section_header">Sign Up</h2>
         <div class="row text-center">
              
             <div class="col-md-4">
-                <div class="numberCircle">1</div>
                     <%=link_to image_tag( "heroku.png", alt: "Heroku Picture", class: "social_media_icons")%>
                     <h3 class="social_media_name">Heroku</h3>
-                    <p class="social_media_text">You must have a heroku account. You can sign up for an account here.</p>
             </div>
             <div class="col-md-4">
-                <div class="numberCircle">2</div>
                     <%=link_to image_tag( "twitter.png", alt: "Twitter Picture", class: "social_media_icons"), "https://twitter.com/", target: '_blank' %>
                     <h3 class="social_media_name">Twitter</h3>
-                    <p class="social_media_text" id="twitter_text">You will also need a Twitter account if you'd like to visualize hastags from Twitter. Sign up for an account here.</p>
-                    <p class="note">Note: Make sure that your account includes your phone number. The application won't work if your Twitter account doesn't include your phone number.</p>
+                    <p id="note">You must add your phone number to your Twitter Account. <a href="#">Here's how.</a></p>
             </div>
             <div class="col-md-4">
-                <div class="numberCircle">3</div>
                     <%=link_to image_tag( "instagram.png", alt: "Instagram Picture", class: "social_media_icons"), "https://instagram.com/", target: '_blank' %>
                     <h3 class="social_media_name">Instagram</h3>
-                    <p class="social_media_text">If you'd like to include posts from Instagram you need your own account from Instagram. Sign up for an account here.</p>
               </div>
         </div>
    </div>
@@ -66,29 +54,20 @@
 
 <div class="container-fluid landing-page-container got-it-container">
    <div class="centering-content-container">
-        <h2 class="section_header">Got it. Then what?</h2>
-        <ul>
-          <li class="third_section_items social_media_api" id="get_access">Get access to Twitter <span class="uppercase">Api</span></li>
-          <li class="third_section_items" id="and_or">and/or</li>
-          <li class="third_section_items social_media_api">Get access to Instagram <span class="uppercase">Api</span></li>
-        </ul>
-        <ol class="twitter_api">
-          <li><span>Visit</span> https://apps.twitter.com/</li>
-          <li><span>Click</span> on 'Create New App'</li>
-          <li><span>Fill</span> out the form</li>
-           <span><i class="glyphicon glyphicon-camera"></i><span>Click</span> on the camera to see screenshots to help you through this part.</span>
-          <li><span>Create</span> your own Twitter application</li>
-           <li><span>Copy down</span> the Client <span>Id.</span></li>
-           <span>You will need this to set up your <span>Dashtag</span> page.</span>
-        </ol>
-         <ol class="instagram_api">
-          <li class="instagram_list"><span>Visit</span> https://instagram.com/developer/client/register/</li>
-          <li class="instagram_list"><span>Fill</span> out the form</li>
-           <span><i class="glyphicon glyphicon-camera"></i><span>Click</span> on the camera to see screenshots to help you through this part.</span>
-          <li class="instagram_list"><span>Register</span> your application</li>
-           <li class="instagram_list"><span>Copy down</span> the Client <span>Id</span> and client <span>secret</span></li>
-           <span>You will need this to set up your <span>Dashtag</span> page.</span>
-        </ol>
+        <h2 class="section_header">Get Access to the API</h2>
+        <div class="access_to_twitter social_media_api "> 
+          <ul> 
+            <li>Get acess to Twitter <span class="uppercase">Api</span></li>
+          </ul>
+          <div class="get_directions_button"> 
+                <button type="button" class="btn btn-lg"><a href="#">Click here for directions</a></button>
+            </div>
+        </div> 
+        <div class="access_to_instagram social_media_api "> 
+          <ul> 
+            <li>Get acess to Instagram <span class="uppercase">Api</span></li>
+          </ul>
+        </div> 
    </div>
 </div>
 
@@ -96,10 +75,8 @@
    <div class="centering-content-container">
         <h2 class="section_header">You're ready to launch!</h2>
          <div class="solid_border">
-             <p class="last_section_para">All you do now is plug & play.</p>
-             <p class="last_section_para">Click the button below to deploy the app. You'll be taken to a form in Heroku where you will be prompted  to name your <span class="uppercase">Dashtag</span>  page, provide the <span class="uppercase">Api</span> information, and customize the fonts and colors on your page.</p>
-             <p class="last_section_para">To get a better understanding of all the elements that you can customize on your <span class="uppercase">Dashtag</span> page - click on the Documentation section of this site. You'll get detailed descriptions and definitions.</p>
-             <div class="btn"> 
+           <p class="last_section_para">You now have everything you need to launch your own <span class="uppercase">Dashtag.</span> Just click on the button below to login into Heroku so you can customize and deploy your website.</p> 
+             <div class="login_button"> 
                 <button type="button" class="btn btn-lg"><a href="/login" id="login">Login to Heroku</a></button>
             </div>
          </div>

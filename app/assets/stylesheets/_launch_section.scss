@@ -1,12 +1,11 @@
 .ready-to-launch-container {
 	background-color: $ready-to-launch;
-	border-radius: 6px; 
 	color: $white;
 	padding-bottom: 30px;
 }
 .solid_border {
 	 border: 5px solid #fff;
-	 margin-top: 20px;
+	 margin-top: 60px;
 	 margin-left: 60px;
 	 margin-right: 60px;
 	 margin-bottom: 60px;
@@ -22,9 +21,12 @@
 .uppercase {
 	text-transform: uppercase;
 }
-.btn {
-	margin-left: 140px; 
-	margin-top: 20px;
+.login_button {
+	margin-left: 220px; 
+	margin-top: 60px;
+}
+.button {
+	box-shadow: 10px 10px 5px #888888;
 }
 .btn-lg {
 	background-color: $heroku-color; 
