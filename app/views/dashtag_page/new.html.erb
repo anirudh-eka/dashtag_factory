@@ -5,24 +5,20 @@
   <div> <h4>Required</h4>
   <%= label_tag(:name, "Name") %>
   <%= text_field(:dashtag_page, :name) %>
-  <%= label_tag(:hashtags, "Hashag(s)") %>
-  <%= text_field(:dashtag_page, :hashtags) %>
-  <%= label_tag(:twitter_consumer_key, "Twitter Consumer Key") %>
-  <%= text_field(:dashtag_page, :twitter_consumer_key) %>
-  <%= label_tag(:twitter_consumer_secret, "Twitter Consumer Secret") %>
-  <%= text_field(:dashtag_page, :twitter_consumer_secret) %>
+  
   </div>
-  <div><h4>Optional</h4>
+  <div><h4>Important Possible Things</h4>
     <ul style = "list-style-type: none; display: inline-block">
-      <li> <%= label_tag(:censored_words, "Censored Words") %></li>
-      <li><%= text_field(:dashtag_page, :censored_words) %></li>
-      
-      <li><%= label_tag(:censored_users, "Censored Users") %></li>
-      <li><%= text_field(:dashtag_page, :censored_users) %></li>
-      
-      <li><%= label_tag(:instagram_client_id, "Instagram Client Id") %></li>
-      <li><%= text_field(:dashtag_page, :instagram_client_id) %></li>
-      
+    <li><%= label_tag(:hashtags, "Hashag(s)") %></li>
+    <li><%= text_field(:dashtag_page, :hashtags) %></li>
+    <li><%= label_tag(:twitter_consumer_key, "Twitter Consumer Key") %></li>
+    <li><%= text_field(:dashtag_page, :twitter_consumer_key) %></li>
+    <li><%= label_tag(:twitter_consumer_secret, "Twitter Consumer Secret") %></li>
+    <li><%= text_field(:dashtag_page, :twitter_consumer_secret) %></li>
+    <li><%= label_tag(:instagram_client_id, "Instagram Client Id") %></li>
+    <li><%= text_field(:dashtag_page, :instagram_client_id) %></li>
+    </ul>
+    <ul style = "list-style-type: none; display: inline-block">
       <li><%= label_tag(:twitter_users, "Twitter Users") %></li>
       <li><%= text_field(:dashtag_page, :twitter_users) %></li>
       
@@ -32,13 +28,26 @@
       <li><%= label_tag(:instagram_user_ids, "Instagram User Ids") %></li>
       <li><%= text_field(:dashtag_page, :instagram_user_ids) %></li>
     </ul>
-
-    <ul style = "list-style-type: none; display: inline-block">  
+  </div>
+  <div><h4>Optional</h4>
+    <ul style = "list-style-type: none; display: inline-block">
+      <li> <%= label_tag(:censored_words, "Censored Words") %></li>
+      <li><%= text_field(:dashtag_page, :censored_words) %></li>
+      
+      <li><%= label_tag(:censored_users, "Censored Users") %></li>
+      <li><%= text_field(:dashtag_page, :censored_users) %></li>
+    
       <li><%= label_tag(:font_family, "Font Family") %></li>
       <li><%= text_field(:dashtag_page, :font_family) %></li>
-      
+    
       <li><%= label_tag(:header_title, "Header Title") %></li>
       <li><%= text_field(:dashtag_page, :header_title) %></li>
+    </ul>
+
+    <ul style = "list-style-type: none; display: inline-block">  
+      
+      
+      
 
       <li><%= label_tag(:header_link, "Header Link") %></li>
       <li><%= text_field(:dashtag_page, :header_link) %></li>
@@ -48,11 +57,13 @@
 
       <li><%= label_tag(:background_color, "Background Color") %></li>
       <li><%= text_field(:dashtag_page, :background_color) %></li>
+
+      <li><%= label_tag(:post_color_1, "Post Color 1") %></li>
+      <li><%= text_field(:dashtag_page, :post_color_1) %></li>
     </ul>
 
     <ul style = "list-style-type: none; display: inline-block">
-      <li><%= label_tag(:post_color_1, "Post Color 1") %></li>
-      <li><%= text_field(:dashtag_page, :post_color_1) %></li>
+      
 
       <li><%= label_tag(:post_color_2, "Post Color 2") %></li>
       <li><%= text_field(:dashtag_page, :post_color_2) %></li>
