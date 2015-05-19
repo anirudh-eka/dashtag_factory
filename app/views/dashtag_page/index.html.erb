@@ -8,30 +8,29 @@
                 <li data-target="#myCarousel" data-slide-to="1"></li>
              </ol>
 
-          <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <%=link_to image_tag( "carousel_pic.png", alt: "Carousel Picture") %>
+            <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                      <%=link_to image_tag( "carousel_pic.png", alt: "Carousel Picture") %>
+                  </div>
+                  <div class="item">
+                    <p class="text-center carousel_main_text"><span class="uppercase">Dashtag</span> Factory allows users to set up their own instance of <span class="uppercase">Dashtag</span> so they can visualize selected hashtags from Twitter and Instagram. </p>
+                    <p class="text-center carousel_main_text">The best part is it's free!</p>
                 </div>
-                <div class="item">
-                  <p class="text-center carousel_main_text"><span class="uppercase">Dashtag</span> Factory allows users to set up their own instance of <span class="uppercase">Dashtag</span> so they can visualize selected hashtags from Twitter and Instagram. </p>
-                  <p class="text-center carousel_main_text">The best part is it's free!</p>
-              </div>
-          </div>
+            </div>
           
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-          </a>
-      </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+          </div>
       <div class="link-to-next-step" role= "button">
          <a href="#sign-up">Next Step
             <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
          </a>
-
       </div>
    </div>
 </div>
@@ -40,27 +39,25 @@
    <div class="centering-content-container">
         <h2 class="section_header">Sign Up</h2>
         <div class="row text-center">
-             
-            <div class="col-md-4">
-                    <%=link_to image_tag( "heroku.png", alt: "Heroku Picture", class: "social_media_icons")%>
-                    <h3 class="social_media_name">Heroku</h3>
-            </div>
-            <div class="col-md-4">
-                    <%=link_to image_tag( "twitter.png", alt: "Twitter Picture", class: "social_media_icons"), "https://twitter.com/", target: '_blank' %>
-                    <h3 class="social_media_name">Twitter</h3>
-                    <p id="note">You must add your phone number to your Twitter Account. <a href="#">Here's how.</a></p>
-            </div>
-            <div class="col-md-4">
-                    <%=link_to image_tag( "instagram.png", alt: "Instagram Picture", class: "social_media_icons"), "https://instagram.com/", target: '_blank' %>
-                    <h3 class="social_media_name">Instagram</h3>
-              </div>
+          <div class="col-md-4">
+            <%=link_to image_tag( "heroku.png", alt: "Heroku Picture", class: "social_media_icons")%>
+            <h3 class="social_media_name">Heroku</h3>
+          </div>
+          <div class="col-md-4">
+            <%=link_to image_tag( "twitter.png", alt: "Twitter Picture", class: "social_media_icons"), "https://twitter.com/", target: '_blank' %>
+            <h3 class="social_media_name">Twitter</h3>
+            <p id="note">You must add your phone number to your Twitter Account. <a href="#">Here's how.</a></p>
+          </div>
+          <div class="col-md-4">
+            <%=link_to image_tag( "instagram.png", alt: "Instagram Picture", class: "social_media_icons"), "https://instagram.com/", target: '_blank' %>
+            <h3 class="social_media_name">Instagram</h3>
+          </div>
         </div>
           <div class="link-to-next-step">
             <a  href="#get-api">Next Step
               <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
             </a>
           </div>
-
    </div>
 </div>
 
