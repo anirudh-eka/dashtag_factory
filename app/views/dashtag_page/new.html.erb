@@ -4,67 +4,67 @@
 <%= form_tag("/dashtag_page/create", method: "post") do %>
   <div> <h4>Required</h4>
   <%= label_tag(:name, "Name") %>
-  <%= text_field_tag(:name) %>
+  <%= text_field(:dashtag_page, :name) %>
   <%= label_tag(:hashtags, "Hashag(s)") %>
-  <%= text_field_tag(:hashtags) %>
+  <%= text_field(:dashtag_page, :hashtags) %>
   <%= label_tag(:twitter_consumer_key, "Twitter Consumer Key") %>
-  <%= text_field_tag(:twitter_consumer_key) %>
+  <%= text_field(:dashtag_page, :twitter_consumer_key) %>
   <%= label_tag(:twitter_consumer_secret, "Twitter Consumer Secret") %>
-  <%= text_field_tag(:twitter_consumer_secret) %>
+  <%= text_field(:dashtag_page, :twitter_consumer_secret) %>
   </div>
   <div><h4>Optional</h4>
     <ul style = "list-style-type: none; display: inline-block">
       <li> <%= label_tag(:censored_words, "Censored Words") %></li>
-      <li><%= text_field_tag(:censored_words) %></li>
+      <li><%= text_field(:dashtag_page, :censored_words) %></li>
       
       <li><%= label_tag(:censored_users, "Censored Users") %></li>
-      <li><%= text_field_tag(:censored_users) %></li>
+      <li><%= text_field(:dashtag_page, :censored_users) %></li>
       
       <li><%= label_tag(:instagram_client_id, "Instagram Client Id") %></li>
-      <li><%= text_field_tag(:instagram_client_id) %></li>
+      <li><%= text_field(:dashtag_page, :instagram_client_id) %></li>
       
       <li><%= label_tag(:twitter_users, "Twitter Users") %></li>
-      <li><%= text_field_tag(:twitter_users) %></li>
+      <li><%= text_field(:dashtag_page, :twitter_users) %></li>
       
       <li><%= label_tag(:instagram_users, "Instagram Users") %></li>
-      <li><%= text_field_tag(:instagram_users) %></li>
+      <li><%= text_field(:dashtag_page, :instagram_users) %></li>
       
       <li><%= label_tag(:instagram_user_ids, "Instagram User Ids") %></li>
-      <li><%= text_field_tag(:instagram_user_ids) %></li>
+      <li><%= text_field(:dashtag_page, :instagram_user_ids) %></li>
     </ul>
 
     <ul style = "list-style-type: none; display: inline-block">  
       <li><%= label_tag(:font_family, "Font Family") %></li>
-      <li><%= text_field_tag(:font_family) %></li>
+      <li><%= text_field(:dashtag_page, :font_family) %></li>
       
       <li><%= label_tag(:header_title, "Header Title") %></li>
-      <li><%= text_field_tag(:header_title) %></li>
+      <li><%= text_field(:dashtag_page, :header_title) %></li>
 
       <li><%= label_tag(:header_link, "Header Link") %></li>
-      <li><%= text_field_tag(:header_link) %></li>
+      <li><%= text_field(:dashtag_page, :header_link) %></li>
 
       <li><%= label_tag(:header_color, "Header Color") %></li>
-      <li><%= text_field_tag(:header_color) %></li>
+      <li><%= text_field(:dashtag_page, :header_color) %></li>
 
       <li><%= label_tag(:background_color, "Background Color") %></li>
-      <li><%= text_field_tag(:background_color) %></li>
+      <li><%= text_field(:dashtag_page, :background_color) %></li>
     </ul>
 
     <ul style = "list-style-type: none; display: inline-block">
       <li><%= label_tag(:post_color_1, "Post Color 1") %></li>
-      <li><%= text_field_tag(:post_color_1) %></li>
+      <li><%= text_field(:dashtag_page, :post_color_1) %></li>
 
       <li><%= label_tag(:post_color_2, "Post Color 2") %></li>
-      <li><%= text_field_tag(:post_color_2) %></li>
+      <li><%= text_field(:dashtag_page, :post_color_2) %></li>
 
       <li><%= label_tag(:post_color_3, "Post Color 3") %></li>
-      <li><%= text_field_tag(:post_color_3) %></li>
+      <li><%= text_field(:dashtag_page, :post_color_3) %></li>
 
       <li><%= label_tag(:post_color_4, "Post Color 4") %></li>
-      <li><%= text_field_tag(:post_color_4) %></li>
+      <li><%= text_field(:dashtag_page, :post_color_4) %></li>
 
       <li><%= label_tag(:api_rate, "API Rate") %></li>
-      <li><%= text_field_tag(:api_rate) %></li>
+      <li><%= text_field(:dashtag_page, :api_rate) %></li>
     </ul>
   </div>
   <%= submit_tag("Deploy") %>
