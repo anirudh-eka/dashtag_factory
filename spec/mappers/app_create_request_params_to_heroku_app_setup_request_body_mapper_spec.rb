@@ -4,6 +4,7 @@ describe AppCreateRequestParamsToHerokuAppSetupRequestBodyMapper do
   it "should build a request body" do
     params = {name: "mydashtagpage", hashtags: "hash"} 
 
+
     request_body = { 
         "app"=> {
           "name" => "mydashtagpage"

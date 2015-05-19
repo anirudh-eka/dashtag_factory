@@ -7,12 +7,7 @@ class DashtagPageController < ApplicationController
   def success
   end
   def create
-    # client = PlatformAPI.connect_oauth()
-    # submit_form(client)
-    # app_setup = AppSetup.new(client)
     app_setup = @app_setup_service.create(session[:access_token])
-
-    # mapper = AppCreateRequestParamsToHerokuAppSetupRequestBodyMapper.new
     request_body = @mapper.build(params[:dashtag_page])
     error_message = HerokuAppService.create_app_setup(app_setup, request_body)
     
@@ -41,10 +36,3 @@ class DashtagPageController < ApplicationController
     @mapper = mapper
   end
 end 
-
-
-class AppSetupService
-  def create(platform_api_access_token)
-    AppSetup.new(PlatformAPI.connect_oauth(platform_api_access_token))
-  end
-end
