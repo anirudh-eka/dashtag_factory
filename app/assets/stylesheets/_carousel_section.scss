@@ -7,19 +7,10 @@ h1#dashtag_logo {
 	background-color: $jumbotron-background-color;
 	height: 100%; 	
 }
-#myCarousel {
-	background-color: $carousel-color;	
-}
-.carousel-inner {
-	height: 370px;
-	margin-top: 60px;
-}
+.landing-page-img img {
+	width: 75%;
+	margin-left: 20%;
+	margin-top: 5%;
+    background-color: $carousel-color;	
 
-.carousel-control.left, .carousel-control.right {
-    background-image: none
-}
-p.carousel_main_text {
-	 color: $white;
-	 padding: 60px 160px 0 160px; 
-	 font-size: 35px; 
 }
