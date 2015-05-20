@@ -1,65 +1,65 @@
 <div class="container-fluid landing-page-container carousel-container">
-    <div class="centering-content-container">
-      <h1 class="text-center" id="dashtag_logo">Dashtag</h1>
-      <div class ="landing-page-img main-img-container"> 
-        <%=link_to image_tag( "carousel_pic.png", alt: "Carousel Picture") %>
-      </div>
-      <div class="row text-center">  
-        <div class="center-button" role= "button">
-           <a class = "btn btn-lg" href="#steps">Get Started</a>
-        </div>
-      </div>
+  <div class="centering-content-container">
+    <h1 class="text-center" id="dashtag_logo">Dashtag</h1>
+    <div class ="landing-page-img main-img-container"> 
+      <%=link_to image_tag( "carousel_pic.png", alt: "Carousel Picture") %>
+    </div>
+    <div class="row text-center">  
+      <div class="center-button" role= "button">
+       <a class = "btn btn-lg" href="#steps">Get Started</a>
+     </div>
    </div>
+ </div>
 </div>
 
 <div id="steps" class="container-fluid landing-page-container">
-   <div class="centering-content-container">
-        <h2 class="section_header">Get Started in 3 Easy Steps</h2>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <%=link_to image_tag( "heroku.png", alt: "Heroku Picture", class: "social_media_icons")%>
-            <h3>Attach a Heroku account</h3>
+ <div class="centering-content-container">
+  <h2 class="section_header">Get Started in 3 Easy Steps</h2>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <%=link_to image_tag( "heroku.png", alt: "Heroku Picture", class: "social_media_icons")%>
+      <h3>Attach a Heroku account</h3>
 
-          </div>
-          <div class="col-md-4">
-            <%=link_to image_tag( "twitter.png", alt: "Twitter Picture", class: "social_media_icons") %>
-            <h3>Attach a social media account</h3>
-          </div>
-          <div class="col-md-4">
-            <%=link_to image_tag( "rocket.png", alt: "Rocket Picture", class: "social_media_icons") %>
-            <h3>Customize and Launch your own Dashtag</h3>
-          </div>
-        </div>
+    </div>
+    <div class="col-md-4">
+      <%=link_to image_tag( "twitter.png", alt: "Twitter Picture", class: "social_media_icons") %>
+      <h3>Attach a social media account</h3>
+    </div>
+    <div class="col-md-4">
+      <%=link_to image_tag( "rocket.png", alt: "Rocket Picture", class: "social_media_icons") %>
+      <h3>Customize and Launch your own Dashtag</h3>
+    </div>
+  </div>
         <!-- <div class="link-to-next-step">
           <a  href="#get-api">Access to the API
             <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
           </a>
         </div> -->
         <div class= "row text-center">
-      <a class = "btn btn-lg" href="#sign-up-heroku">Step 1: Attach a Heroku Account</a>
-    </div>
-   </div>
-</div>
-<div id="sign-up-heroku" class="container-fluid landing-page-container what-do-i-need-container">
-   <div class="centering-content-container">
-    <h2 class="section_header">Sign Up or Log In to Heroku</h2>
-    <div class="row text-center">
-      <div>
-        <%=link_to image_tag( "heroku.png", alt: "Heroku Picture", class: "social_media_icons")%>
-        <h3 class="social_media_name">Heroku</h3>
+          <a class = "btn btn-lg" href="#sign-up-heroku">Step 1: Attach a Heroku Account</a>
+        </div>
       </div>
     </div>
-    <div class= "row text-center">
-      <div class="col-md-6">
-        <a class = "btn btn-lg" href="#twitter-account">Start with Twitter</a>
+    <div id="sign-up-heroku" class="container-fluid landing-page-container what-do-i-need-container">
+     <div class="centering-content-container">
+      <h2 class="section_header">Sign Up or Log In to Heroku</h2>
+      <div class="row text-center">
+        <div>
+          <%=link_to image_tag( "heroku.png", alt: "Heroku Picture", class: "social_media_icons")%>
+          <h3 class="social_media_name">Heroku</h3>
+        </div>
       </div>
-      <div class="col-md-6">
-        <a class = "btn btn-lg" href="#instagram-account">Start with Instagram</a>
+      <div class= "row text-center">
+        <div class="col-md-6">
+          <a class = "btn btn-lg" href="#twitter-account">Start with Twitter</a>
+        </div>
+        <div class="col-md-6">
+          <a class = "btn btn-lg" href="#instagram-account">Start with Instagram</a>
+        </div>
       </div>
     </div>
-   </div>
-</div>
-<div id="twitter-account" class="container-fluid landing-page-container twitter-account-container">
+  </div>
+  <div id="twitter-account" class="container-fluid landing-page-container twitter-account-container">
    <div class="centering-content-container">
     <h2 class="section_header">Log In or Sign Up for Twitter</h2>
     <div class="row text-center">
@@ -71,82 +71,98 @@
     <div class= "row text-center">
       <a class = "btn btn-lg" href="#get-twitter-api">Get Access to Twitter API</a>
     </div>
-   </div>
+  </div>
 </div>
 <div id = "get-twitter-api" class="container-fluid landing-page-container got-it-container">
-   <div class="centering-content-container">
-      <h2 class="section_header">Get Access to API</h2>
-      <div class = "row text-center">
-        <div class = "col-md-6">
-          <ul>
-            <li>1. Visit <a href="https://apps.twitter.com">Twitter Developer</a></li>
-            <li>2. Click "Create a new app"</li>
-            <li>3. Complete "Create an Application" form</li>
-            <li>4. Go to the Keys and Access Tokens tab</li>
-            <li>5. Copy down the Twitter Consumer Key and Twitter Consumer Secret</li>
-          </ul>
-        </div>
-        <div class = "col-md-6">
-          <div class="access_to_twitter social_media_api "> 
-            <ul> 
-              <li>Get access to Twitter <span class="uppercase">Api</span></li>
-            </ul>
-            <div class="get_directions_button"> 
-                  <button type="button" class="btn btn-lg"><a href="#">Click here for directions</a></button>
-              </div>
-          </div> 
-        </div>
-      </div>
-    <div class= "row text-center">
-      <div class="col-md-6">
-        <a class = "btn btn-lg" href="#instagram-account">Attach Instagram</a>
-      </div>
-      <div class="col-md-6">
-        <a class = "btn btn-lg" href="#launch">Skip Instagram and Customize my Dashtag</a>
-      </div>
+ <div class="centering-content-container">
+  <h2 class="section_header">Get Access to API</h2>
+  <div class = "row text-center">
+    <div class = "col-md-6 instruction-list">
+      <ol>
+        <li>Visit <a href="https://apps.twitter.com">Twitter Developer</a></li>
+        <li>Click "Create a new app"</li>
+        <li>Complete "Create an Application" form</li>
+        <li>Go to the Keys and Access Tokens tab</li>
+        <li>Copy down the Twitter Consumer Key <br> and Twitter Consumer Secret</li>
+      </ol>
     </div>
-   </div>
+
+    <div class = "col-md-6">
+      <div class="social_media_api"> 
+        <span>Get access to Twitter <span class="uppercase">Api</span></span>
+        <div class="get_directions_button"> 
+          <button type="button" class="btn btn-lg"><a href="#">Click here for directions</a></button>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <div class= "row text-center">
+    <div class="col-md-6">
+      <a class = "btn btn-lg" href="#instagram-account">Attach Instagram</a>
+    </div>
+    <div class="col-md-6">
+      <a class = "btn btn-lg" href="#launch">Skip Instagram and Customize my Dashtag</a>
+    </div>
+  </div>
 </div>
+</div>
+
+
 <div id="instagram-account" class="container-fluid landing-page-container twitter-account-container">
-   <div class="centering-content-container">
-    <h2 class="section_header">Log In or Sign Up for Instagram</h2>
-    <div class="row text-center">
-      <div>
-        <%=link_to image_tag( "instagram.png", alt: "Instagram Picture", class: "social_media_icons")%>
-      </div>
+ <div class="centering-content-container">
+  <h2 class="section_header">Log In or Sign Up for Instagram</h2>
+  <div class="row text-center">
+    <div>
+      <%=link_to image_tag( "instagram.png", alt: "Instagram Picture", class: "social_media_icons")%>
     </div>
-    <div class= "row text-center">
-      <a class = "btn btn-lg" href="#get-instagram-api">Get Access to Instagram API</a>
-    </div>
-   </div>
+  </div>
+  <div class= "row text-center">
+    <a class = "btn btn-lg" href="#get-instagram-api">Get Access to Instagram API</a>
+  </div>
 </div>
+</div>
+
+
 <div id = "get-instagram-api" class="container-fluid landing-page-container got-it-container">
-   <div class="centering-content-container">
-        <h2 class="section_header">Get Access to API</h2>
-        <div class="access_to_instagram social_media_api "> 
-          <ul> 
-            <li>Get access to Instagram <span class="uppercase">Api</span></li>
-          </ul>
-        </div> 
-          <div class= "row text-center">
-      <div class="col-md-6">
-        <a class = "btn btn-lg" href="#twitter-account">Attach Twitter</a>
-      </div>
-      <div class="col-md-6">
-        <a class = "btn btn-lg" href="#launch">Move on and Customize my Dashtag</a>
-      </div>
+ <div class="centering-content-container">
+  <h2 class="section_header">Get Access to Instagram API</h2>
+  <div class = "row text-center">
+    <div class = "col-md-7 instruction-list">
+      <ol>
+        <li>Visit <a href="https://instagram.com/developer/clients/register/">Instagram Developer</a></li>
+        <li>Complete "Register new Client ID" form</li>
+        <li>Copy down the Client Id</li>
+      </ol>
     </div>
-   </div>
+
+    <div class = "col-md-5">
+      <div class="social_media_api"> 
+        <span>Get access to Instagram <span class="uppercase">Api</span></span>
+        <div class="get_directions_button"> 
+          <button type="button" class="btn btn-lg"><a href="#">Click here for directions</a></button>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <div class= "row text-center">
+    <div class="col-md-6">
+      <a class = "btn btn-lg" href="#launch">Move on and Customize my Dashtag</a>      
+    </div>
+    <div class="col-md-6">
+      <a class = "btn btn-lg" href="#twitter-account">Attach Twitter</a>
+    </div>
+  </div>
+</div>
 </div>
 
 <div id = "launch" class="container-fluid landing-page-container ready-to-launch-container">
-   <div class="centering-content-container">
-        <h2 class="section_header">You're ready to launch!</h2>
-         <div class="solid_border">
-           <p class="last_section_para">You now have everything you need to launch your own <span class="uppercase">Dashtag.</span> Just click on the button below to login into Heroku so you can customize and deploy your website.</p> 
-             <div class="login_button"> 
-                <button type="button" class="btn btn-lg"><a href="/login" id="login">Login to Heroku</a></button>
-            </div>
-         </div>
-   </div>
+ <div class="centering-content-container">
+  <h2 class="section_header">You're ready to launch!</h2>
+  <div class="solid_border">
+   <p class="last_section_para">You now have everything you need to launch your own <span class="uppercase">Dashtag.</span> Just click on the button below to login into Heroku so you can customize and deploy your website.</p> 
+   <div class="login_button"> 
+    <button type="button" class="btn btn-lg"><a href="/login" id="login">Customize my Dashtag</a></button>
+  </div>
+</div>
+</div>
 </div>
