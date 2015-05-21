@@ -3,7 +3,7 @@ require 'spec_helper'
 describe DashtagPageController do
 	context 'When creating a heroku app' do 
 		it 'calls the HerokuAppService with the correct request_body and a new app_setup' do 
-			app_setup = AppSetup.new("blah")
+			app_setup = AppSetup.new("blah", "something")
 			app_setup_service_mock = double();
 			allow(app_setup_service_mock).to receive(:create).with(any_args).and_return(app_setup)
 
