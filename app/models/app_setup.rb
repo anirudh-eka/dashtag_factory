@@ -11,9 +11,3 @@ class AppSetup
   end
 
 end
-
-# AppSetupService
-  # - .create #=> AppSetup || throws an error
-# AppSetup 
-  # when initialized needs client and an id
-  # - update_status/polling, etc.
