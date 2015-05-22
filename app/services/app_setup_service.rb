@@ -1,6 +1,6 @@
 class AppSetupService
   def create(client, request_body)
-  	AppSetup.new(create_app_setup_on_heroku(client, request_body)["id"], client)
+  	app_setup = AppSetup.new(create_app_setup_on_heroku(client, request_body)["id"], client)
   end
 end
 

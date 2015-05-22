@@ -1,5 +1,5 @@
 class DashtagPageController < ApplicationController
-  before_action :load_app_setup_service, :load_mapper, :load_heroku_platform_api_service
+  before_action :load_app_service, :load_mapper, :load_heroku_platform_api_service
 
 
   def new
@@ -10,14 +10,13 @@ class DashtagPageController < ApplicationController
     client = @heroku_platform_api_service.create_client(session[:access_token])
     request_body = @mapper.build(params[:dashtag_page])
 
-    begin
-      app_setup = @app_setup_service.create(client, request_body)
-      redirect_to :action => "success"
-    rescue AppSetupException => e
-      flash[:error] = e.message 
+    app_create_result = @app_service.create(client, request_body)
+    if app_create_result["status"] == "failed"
+      flash[:error] = app_create_result["message"]
       redirect_to :action => "new"
+    else
+      redirect_to :action => "success"
     end
-
   end
   
   def twitter_api_screenshots
@@ -29,8 +28,8 @@ class DashtagPageController < ApplicationController
   def index
   end
 
-  def load_app_setup_service(service = AppSetupService.new)
-    @app_setup_service ||= service
+  def load_app_service(service = AppService.new)
+    @app_service ||= service
   end
 
   def load_heroku_platform_api_service(service = HerokuPlatformAPIService.new)
