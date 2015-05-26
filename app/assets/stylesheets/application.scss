@@ -30,3 +30,21 @@ body {
     font-weight: 300;
     height: 100%;
 }
+.btn-lg {
+	background-color: $heroku-color; 
+	padding: 15px 30px 15px 30px;
+	color: $white;
+}
+.btn-lg:hover {
+	background-color: $heroku-hover-color; 
+}
+.center-button > a {
+	font-size: 50px;
+	color: $white;
+}
+.center-button{
+	margin-top: 5%;
+}
+h3 {
+	color: $white;
+}

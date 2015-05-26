@@ -3,25 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#twitter-api-screenshots-container {
+.screenshots-container {
 	background-color: $get-access-to-api-color;
 }
 
-#twitter-api-screenshots-container h1 {
+.screenshots-container h1 {
 	color: #f6f7f7;
 	font-family: Helvetica-bold; 
 	text-align: center;
 }
 
-#twitter-api-screenshots-container li {
+.screenshots-container li {
 	color: #f6f7f7;
 	font-family: Helvetica;
 	font-size: 14px;
 
 }
 
-#twitter-api-screenshots-container img {
+.screenshots-container img {
 	height: 400px;
+}
+
+.screenshot_header {
+	padding-top: 60px;
 }
 
 

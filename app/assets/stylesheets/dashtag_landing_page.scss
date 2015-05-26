@@ -2,6 +2,8 @@
 @import "signup_section";
 @import "get_api_section";
 @import "launch_section";
+@import "steps";
+@import "twitter_account_container";
 
 
 .landing-page-container {
@@ -15,15 +17,13 @@
 }
 .link-to-next-step {
 	font-size: 35px; 
-	margin-left: 80%;
+	/*margin-right: 10%;*/
 	margin-top: 10%;
+	float: right;
 }
 .link-to-next-step > a {
 	color: $white; 	
 }
 .link-to-next-step > a:hover {
 	text-decoration: none;
-}
-.glyphicon-chevron-right {
-	vertical-align: text-bottom;
 }

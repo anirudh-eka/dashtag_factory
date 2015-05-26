@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root                                   'dashtag_page#index'
   get  'twitter_api_screenshots'     =>  'dashtag_page#twitter_api_screenshots'
   get  'instagram_api_screenshots'   =>  'dashtag_page#instagram_api_screenshots'
+  get  'twitter_phone_number_screenshots' => 'dashtag_page#twitter_phone_number_screenshots'
   get  'launch_page'                 =>  'dashtag_page#new'
   get  'success'                     =>  'dashtag_page#success'
   post 'dashtag_page/create'
