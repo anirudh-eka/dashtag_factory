@@ -16,8 +16,9 @@ Clone the repo:
 
 	$ git clone https://github.com/anirudh-eka/dashtag_factory.git
 
-create/migrate the test database:
+install libraries and create/migrate the test database:
 
+	$ bundle install
 	$ cd dashtag_factory
 	$ rake db:migrate
 
